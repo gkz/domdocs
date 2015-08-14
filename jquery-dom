@@ -1,0 +1,80 @@
+## Events
+.on(event, handler)     -> o.addEventListner(event, handler)
+.off(event, handler)    -> o.removeEventListner(event, handler)
+.trigger(event)         -> o.dispatchEvent(eventObj)
+
+## Traversing
+.children()             -> el.children
+.closest(selector)      -> el.closest(selector)
+.find(selector)         -> el.queryAll(selector)
+.contents()             -> el.childNodes()
+.parent()               -> el.parentElement
+.next()                 -> el.nextElementSibling
+.prev()                 -> el.previousElementSibling
+.is(selector)           -> boolean el.matches(selector)
+document.getElementById(id)
+.childElementCount
+
+el.find(selector).get(0) -> el.query(selector)
+
+-> el.firstElementChild
+-> el.lastElementChild
+
+
+## Manipulation
+
+### Class Attribute
+.addClass(class)        -> el.classList.add(class)
+.hasClass(class)        -> el.classList.contains(class)
+.removeClass(class)     -> el.classList.remove(class)
+.toggleClass(class)     -> el.classList.toggle(class)
+                        // access
+                        el.classList[index]
+                        // iteration
+                        for (let c of el.classList) { ... }
+
+### Copying
+.clone()                -> el.cloneNode([deep?])
+
+### DOM Insertion, Around
+.unwrap()
+.wrap()
+.wrapAll()
+.wrapInner()
+
+### DOM Insertion, Inside
+.append(node)           -> el.append((Node or String)... nodes)
+.appendTo(nodes)
+.html()
+.html(htmlString)
+.prepend(node)          -> el.prepend((Node or String)... nodes)
+.prependTo(node)
+.text()                 -> el.textContent
+.text(text)             -> el.textContent = text
+
+### DOM Insertion, Outside
+.after(node)            -> el.after((Node or String)... nodes)
+.before(node)           -> el.before((Node or String)... nodes)
+.insertAfter()
+.insertBefore()
+
+### DOM Removal
+.detach()               -> el.remove()
+.remove()               -> el.remove()
+.empty()
+.unwrap()
+
+### DOM Replacement
+.replaceAll()
+.replaceWith(node)      -> el.replaceWith((Node or String)... nodes)
+
+### General Attributes
+.attr(name)             -> el.getAttribute(name)
+.attr(name, value)      -> el.setAttribute(name, value)
+.removeAttr()           -> el.removeAttribute(name)
+.val()
+
+## Other
+element = document.createElement(tagName)
+documentFragmet = document.createDocumentFragement()
+text = document.createTextNode(data)

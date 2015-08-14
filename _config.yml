@@ -1,0 +1,25 @@
+title: "domdocs - dom api documentation"
+baseurl: /domdocs
+
+sass:
+    sass_dir: css/_sass
+
+collections:
+    entries:
+        output: true
+        permalink: /:path/
+    taglist:
+        output: true
+        permalink: /tag/:path/
+
+defaults:
+    - scope:
+        path: ""
+        type: entries
+      values:
+        layout: entry
+    - scope:
+        path: ""
+        type: taglist
+      values:
+        layout: tag

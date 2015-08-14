@@ -1,0 +1,33 @@
+---
+layout: site
+---
+<div class="entry-type">
+    {{ page.type }}
+</div>
+
+<div class="entry-tags">
+    <div>Tags:</div>
+    <ul class="list-unstyled">
+    {% for tag in site.taglist %}
+        {% if page.tags contains tag.id %}
+            <li><a href="{{ site.baseurl }}{{ tag.url }}">{{ tag.title }}</a>
+        {% endif %}
+    {% endfor %}
+    </ul>
+</div>
+
+{% if page.polyfill %}
+<div class="alert alert-warning">
+    <strong>Warning!</strong> Current browsers do not yet support <code>{{ page.title }}</code>, please
+    {% if page.polyfill == true %}
+        <a href="https://github.com/WebReflection/dom4">use a polyfill</a>
+    {% else %}
+        <a href="{{ page.polyfill }}">use a polyfill</a>
+    {% endif %}
+    until they do.
+</div>
+{% endif %}
+
+
+{{ content }}
+

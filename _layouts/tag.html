@@ -1,0 +1,18 @@
+---
+layout: site
+---
+
+{{content}}
+
+<ul class="list-unstyled entry-list">
+{% for entry in site.entries %}
+    {% if entry.tags contains page.id %}
+        <li>
+            <a href="{{ site.baseurl }}{{ entry.url }}">{{ entry.title }}</a>
+            {% if entry.excerpt %}
+                <p>{{ entry.excerpt }}
+            {% endif %}
+        </li>
+    {% endif %}
+{% endfor %}
+</ul>

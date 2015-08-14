@@ -1,0 +1,17 @@
+---
+layout: site
+title: All
+permalink: /tag/all/
+---
+
+All entries:
+
+<ul class="list-unstyled entry-list">
+{% for entry in site.entries %}
+    <li><a href="{{ site.baseurl }}{{ entry.url }}">{{entry.title}}</a>
+    {% if entry.excerpt %}
+        <p>{{ entry.excerpt }}
+    {% endif %}
+{% endfor %}
+</ul>
+
