@@ -36,7 +36,7 @@ code, var
   border-radius: 2px
 
 h1
-  margin-top: 10px
+  margin-top: 0
 
 .entry-list
   li
@@ -56,6 +56,12 @@ h1
 
   li
     margin-right: 5px
+
+    ::after
+      content: ','
+
+    &:last-child ::after
+      content: ''
 
 .alert
   margin-bottom: 15px

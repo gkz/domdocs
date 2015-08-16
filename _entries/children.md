@@ -13,7 +13,7 @@ let children = node.children;
 {% endhighlight %}
 
 
-<h2>Example</h2>
+### Example
 
 HTML:
 
