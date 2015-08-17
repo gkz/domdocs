@@ -7,7 +7,7 @@ type: "void ParentNode.append((Node or String)... nodes)"
 polyfill: true
 ---
 
-Append nodes to the end of a node's child list.
+Append one or more nodes to the end of a node's child list.
 
 {% highlight javascript %}
 node.append(nodes);
@@ -23,7 +23,11 @@ HTML:
 
 {% highlight html %}
 <p>
-    Some
+    All
+    <strong>large</strong>
+    goats
+    <em>are</em>
+    delicious!
 </p>
 {% endhighlight %}
 
@@ -31,16 +35,20 @@ JavaScript:
 
 {% highlight javascript %}
 let el = document.createElement("strong");
-el.textContent = "text";
-document.query("p").append(el, "here");
+el.textContent = "Eat";
+document.query("p").append(el, " them quickly.");
 {% endhighlight %}
 
-Result:
+Resulting HTML:
 
 {% highlight html %}
 <p>
-    Some
-    <strong>text</strong>
-    here
+    All
+    <strong>large</strong>
+    goats
+    <em>are</em>
+    delicious!
+    <strong>Eat</strong>
+    them quickly.
 </p>
 {% endhighlight %}

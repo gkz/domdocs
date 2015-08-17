@@ -7,7 +7,7 @@ type: "void ParentNode.prepend((Node or String)... nodes)"
 polyfill: true
 ---
 
-Prepend nodes to the end of a node's child list.
+Prepend one or more nodes to the end of a node's child list.
 
 {% highlight javascript %}
 node.prepend(nodes);
@@ -23,7 +23,11 @@ HTML:
 
 {% highlight html %}
 <p>
+    All
+    <strong>large</strong>
     goats
+    <em>are</em>
+    delicious!
 </p>
 {% endhighlight %}
 
@@ -31,16 +35,20 @@ JavaScript:
 
 {% highlight javascript %}
 let el = document.createElement("strong");
-el.textContent = "large";
-document.query("p").prepend("Eat", el);
+el.textContent = "I";
+document.query("p").prepend(el, " think:");
 {% endhighlight %}
 
-Result:
+Resulting HTML:
 
 {% highlight html %}
 <p>
-    Eat
+    <strong>I</strong>
+    think:
+    All
     <strong>large</strong>
     goats
+    <em>are</em>
+    delicious!
 </p>
 {% endhighlight %}

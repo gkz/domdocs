@@ -6,7 +6,7 @@ excerpt: add a class to an element
 type: "void Element.classList.add(String... classes)"
 ---
 
-Add classes to an element.
+Add one or more classes to an element.
 
 {% highlight javascript %}
 element.classList.add(c1, c2);

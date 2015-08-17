@@ -1,7 +1,7 @@
 ---
 id: classList.contains
 title: .classList.contains()
-tags: [css, manipulation]
+tags: [css]
 excerpt: contains a class to an element
 type: "boolean Element.classList.contains(String class)"
 ---

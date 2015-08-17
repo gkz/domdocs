@@ -20,13 +20,26 @@
                 <img src="{{ site.baseurl }}/img/dom-logo2.png">
                 <span>domdocs</span>
             </a>
+            <div class="share-buttons navbar-right">
+                <iframe src="http://ghbtns.com/github-btn.html?user=gkz&repo=domdocs&type=watch&count=true&size=large"
+                    allowtransparency="true" frameborder="0" scrolling="0" width="150" height="30"></iframe>
+                 {% include tweet-button.html size="large" %}
+            </div>
         </div>
     </div>
 </header>
 <div class="container" id="main-container">
     <div class="row">
-        <nav class="col-md-3">
-            <ul class="nav nav-pills nav-stacked">
+        <nav class="col-md-2">
+            <button class="btn btn-default btn-lg toggle" data-toggle="collapse" data-target=".nav-pills">
+                <div>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+                Toggle tag list
+            </button>
+            <ul class="nav nav-pills nav-stacked tag-list">
                 <li {% if page.url == '/tag/all/' %}class="active"{% endif %}>
                     <a href="{{ site.baseurl }}/tag/all/">All</a>
                 </li>
@@ -37,17 +50,26 @@
                 {% endfor %}
             </ul>
         </nav>
-        <main class="col-md-9">
+        <main class="col-md-10">
             <h1>{{page.title}}</h1>
             {{content}}
         </main>
     </div>
 </div>
 <footer class="container">
-    footer <a href="{{ site.baseurl }}/acknowledgements">acknowledgements</a>
+    <div class="pull-left">
+        <span>By <a href="https://twitter.com/gkzahariev">George Zahariev</a>.
+    </div>
+    <div class="pull-right">
+        <a href="https://raw.githubusercontent.com/gkz/domdocs/master/LICENSE">MIT License</a> &middot;
+        <a href="{{ site.baseurl }}/acknowledgements">Acknowledgements</a>
+    </div>
 </footer>
 
+<script src="{{ site.baseurl }}/js/jquery-2.1.4.min.js"></script>
+<script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
 <script src="{{ site.baseurl }}/js/dom-elements.min.js"></script>
 <script src="{{ site.baseurl }}/js/dom4.js"></script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </body>
 </html>

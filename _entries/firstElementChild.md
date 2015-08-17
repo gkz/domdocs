@@ -13,3 +13,25 @@ let firstEl = node.firstElementChild;
 {% endhighlight %}
 
 See also: [.lastElementChild]({{ site.baseurl }}/lastElementChild)
+
+### Example
+
+HTML:
+
+{% highlight html %}
+<p>
+    All
+    <strong>large</strong>
+    goats
+    <em>are</em>
+    delicious!
+</p>
+{% endhighlight %}
+
+JavaScript:
+
+{% highlight javascript %}
+let first = document.query("p").firstElementChild;
+{% endhighlight %}
+
+Result is the `<strong>large</strong>` element.

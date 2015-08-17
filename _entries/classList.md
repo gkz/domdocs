@@ -1,7 +1,7 @@
 ---
 id: classList
 title: .classList
-tags: [css, manipulation]
+tags: [css]
 excerpt: list of css classes
 type: "DOMTokenList Element.classList"
 ---

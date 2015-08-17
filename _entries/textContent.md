@@ -19,3 +19,37 @@ node.textContent = text;
 {% endhighlight %}
 
 Replaces all the children of <var>node</var> with a text node with the content of <var>text</var>.
+
+### Examples
+
+HTML:
+
+{% highlight html %}
+<p>
+    All
+    <strong>large</strong>
+    goats
+    <em>are</em>
+    delicious!
+</p>
+{% endhighlight %}
+
+#### Get textContent
+
+JavaScript:
+
+{% highlight javascript %}
+let text = document.query("p").textContent;
+{% endhighlight %}
+
+Result is `"All large goats are delicous!"` (with more whitespace).
+
+#### Set textContent
+
+JavaScript:
+
+{% highlight javascript %}
+document.query("p").textContent = "hi there";
+{% endhighlight %}
+
+HTML is now `<p>hi there</p>`.

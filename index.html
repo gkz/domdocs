@@ -4,25 +4,44 @@ home: true
 title: domdocs
 ---
 
-jQuery API style docs for native DOM functionality.
+<p>jQuery API style docs for native DOM functionality.
+
+<p>Check out a list of <strong><a href="{{ site.baseurl }}/tag/all">all entries</a></strong>, or pick a tag from the <span class="tag-list-above">menu above</span><span class="tag-list-left">left</span>.
+
+<p>See the <a href="https://github.com/gkz/domdocs">GitHub project</a> to recommend improvements.
+
+<p>Much of the information included here is taken from the <a href="https://dom.spec.whatwg.org">DOM specification</a> by <a href="https://whatwg.org/">WHATWG</a>. Not everything in the specification (spec) is described here, instead what is deemed most useful to web developers is documented. For full information, always consult the spec.
+
+<p>While the DOM is not necessarily tied to JavaScript (JS), JS is the most common way to interact with the DOM. As such, all the examples use JS. Specifically, the examples use ES6/ES2015.
+
+<p>For updates on domdocs, <a href="https://twitter.com/gkzahariev" class="twitter-follow-button" data-show-count="false" data-lang="en" data-size="large">follow @gkzahariev</a>
+
+<div class="alert alert-info">
+<strong>Note:</strong> Some of the methods described here are not implemented by current browsers. A link to a polyfill is given if this is the case. Hopefully, this site will stimulate further use of these new APIs and encourage browser makers to implement them.
+</div>
+
 
 <h3>Terminology</h3>
 
 <dl>
+    <dt>DOM</dt>
+    <dd>Document Object Model.</dd>
     <dt>Node</dt>
-    <dd></dd>
+    <dd>A node in the DOM tree, includes Elements, Text Nodes, the Document, and Document Fragments.</dd>
+    <dt>Text Node</dt>
+    <dd>A node representing text. Often simply visualized as text in developer tools, not as a node.</dd>
     <dt>Element</dt>
-    <dd></dd>
+    <dd>A node representing an HTML element.</dd>
     <dt>Document</dt>
-    <dd></dd>
+    <dd>The root node of the DOM tree.</dd>
     <dt>DocumentFragment</dt>
-    <dd></dd>
+    <dd>A minimal document with no parent. When inserted, its children are inserted instead of itself.</dd>
     <dt>ParentNode</dt>
-    <dd></dd>
-    <dt>ChildNode</dt>
-    <dd></dd>
+    <dd>An interface implemented by Element, Document, and DocumentFragment.</dd>
     <dt>NodeList</dt>
-    <dd></dd>
+    <dd>A collection of nodes - not an Array, see <a href="{{ site.baseurl }}/NodeList">more</a>.</dd>
     <dt>HTMLCollection</dt>
-    <dd></dd>
+    <dd>A collection of elements - not an Array, see <a href="{{ site.baseurl }}/HTMLCollection">more</a>.</dd>
+    <dt>Elements</dt>
+    <dd>A collection of elements - a subclass of Array, see <a href="{{ site.baseurl }}/Elements">more</a>.</dd>
 </dl>

@@ -12,6 +12,7 @@ A property holding the child elements of an element. This property is read-only 
 let children = node.children;
 {% endhighlight %}
 
+See also: [.childNodes]({{ site.baseurl }}/childNodes)
 
 ### Example
 
@@ -19,9 +20,11 @@ HTML:
 
 {% highlight html %}
 <p>
-    Some
-    <strong>big</strong>
+    All
+    <strong>large</strong>
     goats
+    <em>are</em>
+    delicious!
 </p>
 {% endhighlight %}
 
@@ -31,4 +34,4 @@ JavaScript:
 let children = document.query("p").children;
 {% endhighlight %}
 
-Result is a length one HTMLCollection with an item representing the `<strong>` element.
+Result is an HTMLCollection of length two, consisting of the `<strong>large</strong>` element and the `<em>are</em>` element.

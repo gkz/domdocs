@@ -1,7 +1,7 @@
 ---
 id: removeAttribute
 title: .removeAttribute()
-tags: [attributes]
+tags: [attributes, manipulation]
 excerpt: removes an attribute
 type: "void Element.removeAttribute(String name)"
 ---
@@ -13,3 +13,23 @@ element.removeAttribute(name);
 {% endhighlight %}
 
 Removes the attribute <var>name</var> from <var>element</var>.
+
+### Example
+
+HTML:
+
+{% highlight html %}
+<input type="checkbox">
+{% endhighlight %}
+
+JavaScript:
+
+{% highlight javascript %}
+document.query("input").removeAttribute("type");
+{% endhighlight %}
+
+Resulting HTML:
+
+{% highlight html %}
+<input>
+{% endhighlight %}

@@ -6,7 +6,7 @@ excerpt: remove a class from an element
 type: "void Element.classList.remove(String... classes)"
 ---
 
-Remove classes from an element.
+Remove one or more classes from an element.
 
 {% highlight javascript %}
 element.classList.remove(c1, c2);

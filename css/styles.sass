@@ -23,6 +23,16 @@
 .navbar
   margin-bottom: 0
 
+.navbar-header
+  width: 100%
+
+.share-buttons
+  margin-top: 5px
+  & > *
+    display: block
+  iframe
+    margin-bottom: 2px
+
 code, var
   color: #790A2C
 
@@ -31,6 +41,48 @@ code, var
   padding-top: 25px
   padding-bottom: 25px
   border: 1px solid #D1F0BF
+
+.toggle
+  padding: 10px
+  margin-bottom: 10px
+
+  & > div
+    display: inline-block
+
+  font-size: $font-size-large
+  color: $gray-light
+
+  .icon-bar
+    display: block
+    width: 22px
+    height: 2px
+    margin-bottom: 4px
+    background-color: $gray-light
+    border-radius: 1px
+
+    &:last-child
+      margin-bottom: 0
+
+.tag-list
+  display: none
+
+  &.collapsing
+    display: block
+
+.tag-list-above
+  display: inline
+.tag-list-left
+  display: none
+
+@media (min-width: $screen-md-min)
+  .tag-list
+    display: block
+  .toggle
+    display: none
+  .tag-list-above
+    display: none
+  .tag-list-left
+    display: inline
 
 .nav-pills li.active a
   border-radius: 2px
@@ -70,4 +122,4 @@ body
   background-color: #F0FCE9
 
 footer
-  padding-top: 25px
+  padding-top: 10px

@@ -13,3 +13,19 @@ element.hasAttribute(name);
 {% endhighlight %}
 
 Returns true if <var>element</var> has attribute <var>name</var>.
+
+### Example
+
+HTML:
+
+{% highlight html %}
+<input type="checkbox">
+{% endhighlight %}
+
+JavaScript:
+
+{% highlight javascript %}
+let result = document.query("input").hasAttribute("type");
+{% endhighlight %}
+
+Result is `true`.

@@ -14,14 +14,19 @@ element.getAttribute(name);
 
 Looks up the attrbiute <var>name</var> of <var>element</var>.
 
+<div class="alert alert-info">
+    <strong>Note:</strong>
+    Attributes differ from properties on an element. A property is simply a property on the object, which can hold any type, while an attribute is always a string. For a variety of interactive properties, such as <code>checked</code> or <code>value</code> of an input, you probably want to simply access the property, eg. <code>let isChecked = checkboxElement.checked;</code> or <code>let val = inputElement.value;</code>.
+</div>
+
+See also: [.setAttribute()]({{ site.baseurl }}/setAttribute)
+
 ### Example
 
 HTML:
 
 {% highlight html %}
-<p>
-    <input type="checkbox">
-</p>
+<input type="checkbox">
 {% endhighlight %}
 
 JavaScript:

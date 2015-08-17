@@ -22,3 +22,40 @@ document.query(relativeSelector);
 {% endhighlight %}
 
 See also: [.queryAll()]({{ site.baseurl }}/queryAll)
+
+### Examples
+
+HTML:
+
+{% highlight html %}
+<ul class="list-one">
+    <li class="one">Item 1</li>
+    <li>
+        <ul class="list-two">
+            <li class="two">Item 2</li>
+            <li class="three">Item 3</li>
+        </ul>
+    </li>
+</ul>
+{% endhighlight %}
+
+#### Example 1
+
+JavaScript:
+
+{% highlight javascript %}
+let result = document.query(".two");
+{% endhighlight %}
+
+Result is the `<li class="two">Item 2</li>` element.
+
+#### Example 2
+
+JavaScript:
+
+{% highlight javascript %}
+let ul = document.query("ul");
+let result = ul.query("> *");
+{% endhighlight %}
+
+Result is the `<li class="one">Item 1</li>` element.

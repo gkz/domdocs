@@ -3,6 +3,7 @@ baseurl: /domdocs
 
 sass:
     sass_dir: css/_sass
+    style: compressed
 
 collections:
     entries:

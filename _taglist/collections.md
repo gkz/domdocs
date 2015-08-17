@@ -3,4 +3,4 @@ id: collections
 title: Collections
 ---
 
-Collections of nodes.
+Collections of nodes and elements.
